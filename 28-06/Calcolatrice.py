@@ -8,7 +8,12 @@ def sommaVettore(vettore):
 	return somma
 
 def sommaMatrice(matrice1, matrice2):
-	file1 = open(matrice1, "r")
+	file1 = None
+
+	try:
+		file1 = open(matrice1, "r")
+	except Exception, e:
+		print ("Erro 2")
 	file2 = open(matrice2, "r")
 
 
